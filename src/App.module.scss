@@ -1,0 +1,15 @@
+.section {
+  margin-top: 50px;
+  padding: 20px;
+  width: 350px;
+
+  background-color: azure;
+  border-radius: 10px;
+  box-shadow:  -8px 8px 22px #c7c7c7,
+              8px -8px 22px #f9f9f9;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}

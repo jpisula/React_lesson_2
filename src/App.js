@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.scss';
+import Counter from './components/Counter/Counter';
+import Form from './components/Form/Form';
+import { FaSmileWink } from 'react-icons/fa';
 
 function App() {
+  const getFormData = (data) => {
+    console.log(data);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <section className={styles.section}>
+        <h2>Wprowadź swoje dane:</h2>
+        <Form getFormData={getFormData} />
+      </section>
+      <section className={styles.section}>
+        <h2>
+          Dodaj jeden <FaSmileWink /> :
+        </h2>
+        <Counter />
+      </section>
     </div>
   );
 }
